@@ -1,0 +1,132 @@
+@import url("https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap");
+/* Variables  */
+:root {
+  --primaryCyan: hsl(179, 62%, 43%);
+  --primaryBrightYellow: hsl(71, 73%, 54%);
+
+  --neutralLightGray: hsl(204, 43%, 93%);
+  --neutralGrayishBlue: hsl(218, 22%, 67%);
+}
+
+/* Reset  */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Body  */
+body {
+  font-size: 16px;
+  font-family: "Karla", sans-serif;
+  background-color: var(--neutralLightGray);
+  color: #ffffff;
+}
+
+/* Globals */
+h6 {
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+
+button {
+  color: #ffffff;
+  background-color: var(--primaryBrightYellow);
+  border: none;
+  border-radius: 0.4rem;
+  font-size: 1rem;
+  font-weight: bold;
+  width: 100%;
+  padding: 0.9rem 0rem;
+  margin-top: 2rem;
+}
+
+/* Container  */
+.component {
+  margin: 10rem 19rem;
+  overflow: hidden;
+  border-radius: 1rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  /* grid-template-rows: 1fr 1fr; */
+  grid-template-areas:
+    "about about"
+    "sub us";
+}
+
+.component div {
+  padding: 3rem;
+}
+
+.about {
+  grid-area: about;
+  background-color: #ffffff;
+}
+
+.about h3 {
+  color: var(--primaryCyan);
+  font-size: 1.4rem;
+  padding: 0.5rem 0;
+}
+
+.about h6 {
+  color: var(--primaryBrightYellow);
+  padding: 1rem 0;
+}
+
+.about p {
+  color: var(--neutralGrayishBlue);
+}
+
+.subscription {
+  grid-area: sub;
+  background-color: var(--primaryCyan);
+}
+
+.subscription p.price {
+  color: var(--neutralLightGray);
+  padding-bottom: 1rem;
+}
+
+.subscription span {
+  font-weight: bold;
+  font-size: 2rem;
+  color: #ffffff;
+}
+
+.subscription h6 {
+  padding-bottom: 1rem;
+}
+
+.why-us {
+  grid-area: us;
+  background-color: #4abebd;
+}
+
+.why-us h6 {
+  margin-bottom: 1rem;
+}
+
+.why-us p {
+  font-size: 0.9rem;
+  line-height: 1.4rem;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+@media (max-width: 450px) {
+  .component {
+    margin: 4rem 2rem;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "about"
+      "sub"
+      "us";
+  }
+}
